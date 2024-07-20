@@ -1,0 +1,39 @@
+<div class="products">
+  @if(filteredProducts.length > 0){
+  <div>
+    <input
+      [(ngModel)]="name"
+      (ngModelChange)="onSearchTermChange()"
+      class="form-control mb-3 p-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+    />
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (product of filteredProducts | search: name; track product.id) {
+      <tr>
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.name }}</td>
+        <td><img [src]="product.image" [alt]="product.name" /></td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  } @else {
+
+  <p>No products found for the selected category.</p>
+  }
+</div>

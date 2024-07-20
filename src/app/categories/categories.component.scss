@@ -1,0 +1,11 @@
+.form-select {
+  padding: 7px;
+  border: 1px solid #a5a5a5;
+  color: rgb(67, 67, 67);
+  font-size: 14px;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}

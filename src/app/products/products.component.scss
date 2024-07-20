@@ -1,0 +1,27 @@
+.products {
+  input {
+    padding: 7px;
+    border: 1px solid #a5a5a5;
+    color: rgb(67, 67, 67);
+    font-size: 14px;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  .table {
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 10px;
+    text-align: center;
+
+    td {
+      img {
+        width: 200px;
+        height: 150px;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div class="mb-3 d-flex align-items-center justify-content-between">
+  <select
+    (change)="getProductsByCatID($event)"
+    class="form-select mb-3"
+    aria-label="Default select example"
+    [(ngModel)]="selectedCategoryId"
+  >
+    <option selected>Select Category</option>
+    @for (category of getAllCategories; track category.id) {
+    <option [value]="category.id">
+      {{ category.name }}
+    </option>
+    }
+  </select>
+</div>
